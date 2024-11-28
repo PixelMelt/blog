@@ -1,5 +1,3 @@
-This is a blog post where I show you how I trained a large language model on my discord server to get it to imitate my friends.
-
 Did it work well and is it useful in any way? No.
 Is it hilarious to mess around with and does it mimic them well? Yes.
 
