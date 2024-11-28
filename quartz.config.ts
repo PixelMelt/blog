@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🪴 Quartz 4.0",
+    pageTitle: "Pix's blog",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -22,7 +22,7 @@ const config: QuartzConfig = {
     generateSocialImages: false,
     theme: {
       fontOrigin: "googleFonts",
-      cdnCaching: true,
+      cdnCaching: false,
       typography: {
         header: "Schibsted Grotesk",
         body: "Source Sans Pro",
@@ -41,15 +41,20 @@ const config: QuartzConfig = {
           textHighlight: "#fff23688",
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
+          // Main background and text colors
+          light: "#22212C",      // Background color from terminal.background
+          lightgray: "#454158",  // From button.background
+          gray: "#7970A9",       // From comments color
+          darkgray: "#F8F8F2",   // From main foreground color
+          dark: "#FFFFFF",       // Pure white for maximum contrast
+          
+          // Accent colors
+          secondary: "#80FFEA",  // Cyan from theme
+          tertiary: "#9580FF",   // Green from theme
+          
+          // Highlight colors
+          highlight: "rgba(149, 128, 255, 0.15)",  // Based on purple (#9580FF) with low opacity
+          textHighlight: "rgba(255, 202, 128, 0.15)"  // Based on orange (#FFCA80) with low opacity
         },
       },
     },
