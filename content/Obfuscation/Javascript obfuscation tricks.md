@@ -22,7 +22,7 @@ Source: [doctor8296](https://github.com/MichaelXF/js-confuser/issues/151#issue-2
 ```
 
 
-## Reading stacktraces
+## Reading stack traces
 
 ### Using line numbers for string decryption
 Encryption keys based on the column/line numbers of the code. When someone deobfuscates the code, they would get changed (Formatted, Some functions get removed, Expressions expanded, etc)
@@ -79,3 +79,23 @@ function decrypt(encryptedText, key) {
   return decryptedText;
 }
 ```
+
+## Crashing browsers
+Other then the classic while true loop (which is easily located with the browsers devtools)
+There are a few other ways you can get a page to freeze
+### Infinite while loop
+```js
+while(true){}
+```
+### Async function fork bomb
+Source: [doctor8296](https://github.com/MichaelXF/js-confuser/issues/147#issue-2579296752)
+```js
+(async function a() { a(), a() });
+```
+This will not show the location of the code causing the crash in *browser* devtools. In NodeJS a correct stack trace is shown on crash.
+### Async function setTimeout fork bomb
+Source: [doctor8296](https://github.com/MichaelXF/js-confuser/issues/147#issuecomment-2442597848)
+```js
+(async function a() { setTimeout(a); setTimeout(a); })()
+```
+This will not show the location of the code causing the crash in browser devtools or give a stack trace in NodeJS. However this approach uses the over-writable method "setTimeout" which makes it less appealing for use in code protection.
