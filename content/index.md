@@ -11,3 +11,12 @@ I will post things here sometimes
 Kind of interested in web code obfuscation right now.
 
 [Looky here](/Obfuscation/)
+
+Favorite blogs:
+- https://mango.pdf.zone/
+
+Favorite webcomics:
+- https://xkcd.com/
+- https://www.buttersafe.com/
+- https://invisiblebread.com/
+- https://www.monkeyuser.com/

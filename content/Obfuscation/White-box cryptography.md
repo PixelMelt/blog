@@ -83,6 +83,7 @@ LOAD 0
 CALL_HASH_FUNCTION # Logic to call the hash function would be here but is not relevent
 STRING "imtheoutputofahashfunction" # This used to be "42"
 EQUIVALENT
+LOAD 0
 DECRYPT_BLOCK startIndex endIndex # Will decrypt the code between the JIF and label
 # If statement flow
 JUMP_IF_FALSE IF_ELSEBLOCK
