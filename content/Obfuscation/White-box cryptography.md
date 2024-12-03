@@ -6,6 +6,9 @@ Sources:
 
 > The **white-box** model refers to an extreme attack scenario, in which an adversary has full unrestricted access to a cryptographic implementation. A variety of security goals may be posed, the most fundamental being "unbreakability", requiring that any (bounded) attacker should not be able to extract the secret key hardcoded in the implementation, while at the same time the implementation must be fully functional.
 
+>This technique prevents future states of a program from being known before they are reached. In a proper implementation, an attacker wouldn't be able to infer previous states of a program it hasn't tracked, at the same time, the attacker wouldn't be able to jump into states which require non-constant values to be executed (unless it can alter the control flow to visit those nodes and has the proper key to them)
+
+
 Say you want to protect the following code that will reveal a secret only to those who know the password
 
 ```javascript
