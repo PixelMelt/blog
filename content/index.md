@@ -10,5 +10,4 @@ I will post things here sometimes
 
 Kind of interested in web code obfuscation right now.
 
-[Looky here](https://blog.pixelmelt.dev/Obfuscation/)
-
+[Looky here](/Obfuscation/)
