@@ -1,4 +1,4 @@
-# Usage with virtualization based obfuscation
+### Usage with virtualization based obfuscation
 
 Sources:
 - [Mesh design pattern: hash-and-decrypt](https://rdist.root.org/2007/04/09/mesh-design-pattern-hash-and-decrypt/) - [Archive](https://web.archive.org/web/20240117042122/https://rdist.root.org/2007/04/09/mesh-design-pattern-hash-and-decrypt/)
@@ -98,5 +98,37 @@ STOP_VM
 ```
 
 Look at that, now the only way for our secret to be known is for the user to know the exact password used to decrypt the code.
+
+### Usage with plain Javascript
+
+Here is an example of how this would look implemented with normal JS, given this implementation is weak because the code is stored as a string then evaled and it does not use a strong hash or encryption function.
+
+```javascript
+function hash(input) {
+	return input.split("").reduce((a, b) => a + b.charCodeAt(0), 0);
+}
+
+function xorcrypt(text, key) {
+	let result = "";
+	for (let i = 0; i < text.length; i++) {
+		result += String.fromCharCode(text.charCodeAt(i) ^ key);
+	}
+	return result;
+}
+
+function checkPassword(userInput) {
+	if (hash(userInput) === correctHash) {
+		// decrypted value: console.log('the cake is a lie')
+	    eval(xorcrypt("ҰҼҽҠҼҿҶӽҿҼҴӻӴҧһҶӳҰҲҸҶӳҺҠӳҲӳҿҺҶӴӺ", hash(userInput)));
+	} else {
+	    console.log("Access denied");
+	}
+}
+
+checkPassword("wrongpass"); // Access denied
+
+checkPassword("secretpass123"); // the cake is a lie
+```
+
 
 There are more protections that are possible like this one but I dunno how to implement em yet
