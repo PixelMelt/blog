@@ -8,7 +8,7 @@ Sources:
 
 Say you want to protect the following code that will reveal a secret only to those who know the password
 
-```Javascript
+```javascript
 let usrinpt = input("what is the password?")
 if(usrinpt == "42"){
 	console.log("the cake is a lie")
@@ -19,7 +19,7 @@ if(usrinpt == "42"){
 
 You put it through your virtual machine obfuscator and it outputs a VM and the following instructions in bytecode
 
-```YAML
+```yaml
 STRING "what is the password?"
 LOAD 0
 STRING "42"
@@ -41,7 +41,7 @@ Now do you see the issue here? Our secret is in plain text! Sure you might have 
 What if I told you that there is a solution to our problem that would lock everything inside the if statements true condition behind an impenetrable wall? We can use hashing and encryption to do this.
 
 Currently, we are doing something like
-```Javascript
+```javascript
 if(input == "42") {
 	run_code()
 } else {
@@ -74,7 +74,7 @@ if(hash(input) == hashedPassword) {
 ```
 
 Our bytecode now looks something like this
-```YAML
+```yaml
 STRING "what is the password?"
 LOAD 0
 CALL_HASH_FUNCTION # Logic to call the hash function would be here but is not relevent
