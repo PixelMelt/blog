@@ -1,3 +1,14 @@
+---
+title: Cloning your Discord friends with Large Language Models
+description: Did it work well and is it useful in any way? No. Is it hilarious to mess around with and does it mimic them well? Yes.
+tags:
+  - programming
+  - large-language-models
+  - machine-learning
+  - silly
+date: 2024-01-20
+permalink: clone-your-friends
+---
 Did it work well and is it useful in any way? No.
 Is it hilarious to mess around with and does it mimic them well? Yes.
 

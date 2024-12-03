@@ -1,5 +1,9 @@
 ---
 title: Cats with power tools
+description: The blog of a nerd
+tags:
+  - silly
+date: 2024-12-01
 ---
 ### Hi
 I'm Pixelmelt
@@ -10,7 +14,7 @@ I will post things here sometimes
 
 Kind of interested in web code obfuscation right now.
 
-[Looky here](/Obfuscation/)
+[Looky here](/obfuscation/)
 
 Favorite blogs:
 - https://mango.pdf.zone/
