@@ -1,3 +1,12 @@
+---
+title: Javascript obfuscation tricks
+description: JS quirks that can be used for obfuscation
+date: 2024-12-02
+permalink: js-obfuscation-tricks
+tags:
+  - programming
+  - obfuscation
+---
 ## Functions reading themselves
 ### Comments are included when a function reads itself
 

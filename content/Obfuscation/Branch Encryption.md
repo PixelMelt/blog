@@ -1,7 +1,14 @@
 ---
 title: Branch Encryption
+description: Usage of branch encryption in various obfuscation contexts
 aliases:
   - White-box cryptography
+permalink: branch-encryption
+date: 2024-12-03
+tags:
+  - programming
+  - obfuscation
+  - encryption
 ---
 ### Usage with virtualization based obfuscation
 

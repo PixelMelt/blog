@@ -30,11 +30,11 @@ export const defaultContentPageLayout: PageLayout = {
     Component.DesktopOnly(Component.Explorer()),
   ],
   right: [
-    Component.Graph({
-      globalGraph: {
-        scale: 1.3,
-      }
-    }),
+    // Component.Graph({
+    //   globalGraph: {
+    //     scale: 0.9,
+    //   }
+    // }),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
