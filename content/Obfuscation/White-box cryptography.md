@@ -117,7 +117,7 @@ function xorcrypt(text, key) {
 }
 
 function checkPassword(userInput) {
-	if (hash(userInput) === correctHash) {
+	if (hash(userInput) === 1235) {
 		// decrypted value: console.log('the cake is a lie')
 	    eval(xorcrypt("ҰҼҽҠҼҿҶӽҿҼҴӻӴҧһҶӳҰҲҸҶӳҺҠӳҲӳҿҺҶӴӺ", hash(userInput)));
 	} else {
