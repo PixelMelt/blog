@@ -1,4 +1,3 @@
-
 ## Functions reading themselves
 ### Comments are included when a function reads itself
 
@@ -20,7 +19,6 @@ Source: [doctor8296](https://github.com/MichaelXF/js-confuser/issues/151#issue-2
     
 })()
 ```
-
 
 ## Reading stack traces
 

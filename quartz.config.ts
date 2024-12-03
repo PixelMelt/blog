@@ -33,15 +33,20 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#cdb4fa",
-          secondary: "#80ffea",
-          tertiary: "#9580ff",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688",
+          // Main background and text colors
+          light: "#22212C",      // Background color from terminal.background
+          lightgray: "#454158",  // From button.background
+          gray: "#7970A9",       // From comments color
+          darkgray: "#F8F8F2",   // From main foreground color
+          dark: "#FFFFFF",       // Pure white for maximum contrast
+          
+          // Accent colors
+          secondary: "#80FFEA",  // Cyan from theme
+          tertiary: "#9580FF",   // Green from theme
+          
+          // Highlight colors
+          highlight: "rgba(149, 128, 255, 0.15)",  // Based on purple (#9580FF) with low opacity
+          textHighlight: "rgba(255, 202, 128, 0.15)"  // Based on orange (#FFCA80) with low opacity
         },
         darkMode: {
           // Main background and text colors

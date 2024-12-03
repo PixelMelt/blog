@@ -1,13 +1,15 @@
+---
+title: Branch Encryption
+aliases:
+  - White-box cryptography
+---
 ### Usage with virtualization based obfuscation
 
 Sources:
 - [Mesh design pattern: hash-and-decrypt](https://rdist.root.org/2007/04/09/mesh-design-pattern-hash-and-decrypt/) - [Archive](https://web.archive.org/web/20240117042122/https://rdist.root.org/2007/04/09/mesh-design-pattern-hash-and-decrypt/)
 - loski2619 on the [Sneaker Development](https://discord.gg/sneakerdev) Discord
 
-> The **white-box** model refers to an extreme attack scenario, in which an adversary has full unrestricted access to a cryptographic implementation. A variety of security goals may be posed, the most fundamental being "unbreakability", requiring that any (bounded) attacker should not be able to extract the secret key hardcoded in the implementation, while at the same time the implementation must be fully functional.
-
 >This technique prevents future states of a program from being known before they are reached. In a proper implementation, an attacker wouldn't be able to infer previous states of a program it hasn't tracked, at the same time, the attacker wouldn't be able to jump into states which require non-constant values to be executed (unless it can alter the control flow to visit those nodes and has the proper key to them)
-
 
 Say you want to protect the following code that will reveal a secret only to those who know the password
 
@@ -101,7 +103,7 @@ Look at that, now the only way for our secret to be known is for the user to kno
 
 ### Usage with plain Javascript
 
-Here is an example of how this would look implemented with normal JS, given this implementation is weak because the code is stored as a string then evaled and it does not use a strong hash or encryption function.
+Here is an example of how this would look implemented with normal JS, given this implementation is weak because the code is stored as a string then eval'ed and it does not use a strong hash or encryption function.
 
 ```javascript
 function hash(input) {
