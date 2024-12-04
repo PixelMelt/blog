@@ -137,3 +137,5 @@ The first limit is anywhere from 4096 to 1 million tokens.
 The second however is usually 12k to 32k tokens.
 
 If you can exceed either one of these where key parts of your program cannot be extracted and passed to the LLM without context to other parts then attackers who use language models will have a tougher time.
+
+The key here is to make every single part of your program relevant to its execution. If you have say, a giant array of numbers that your program uses, this can easily be replaced with `let bigNumberArray = [6,1,7 numbers continue...]` and an LLM will be able to infer what that variable contains without it needing to be in its context.
