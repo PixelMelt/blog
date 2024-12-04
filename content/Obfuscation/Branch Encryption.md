@@ -16,7 +16,9 @@ Sources:
 - [Mesh design pattern: hash-and-decrypt](https://rdist.root.org/2007/04/09/mesh-design-pattern-hash-and-decrypt/) - [Archive](https://web.archive.org/web/20240117042122/https://rdist.root.org/2007/04/09/mesh-design-pattern-hash-and-decrypt/)
 - loski2619 on the [Sneaker Development](https://discord.gg/sneakerdev) Discord
 
->This technique prevents future states of a program from being known before they are reached. In a proper implementation, an attacker wouldn't be able to infer previous states of a program it hasn't tracked, at the same time, the attacker wouldn't be able to jump into states which require non-constant values to be executed (unless it can alter the control flow to visit those nodes and has the proper key to them)
+>This technique prevents future states of a program from being known before they are reached.
+>
+>In a proper implementation, an attacker wouldn't be able to infer previous states of a program it hasn't tracked, at the same time, the attacker wouldn't be able to jump into states which require non-constant values to be executed (unless it can alter the control flow to visit those nodes and has the proper key to them) - loski2619
 
 Say you want to protect the following code that will reveal a secret only to those who know the password
 
