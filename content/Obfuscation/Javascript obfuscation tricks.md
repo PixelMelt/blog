@@ -8,6 +8,8 @@ tags:
   - obfuscation
   - large-language-models
 ---
+These are various techniques and quirks that can be used to protect javascript code.
+
 ## Functions reading themselves
 ### Comments are included when a function reads itself
 
@@ -112,7 +114,8 @@ This will not show the location of the code causing the crash in browser devtool
 ### Large Language Models
 LLM's are actually very good at code deobfuscation these days, here are some techniques to throw a screwdriver into that form of deobfuscation.
 #### Threats
-The user must input your code as context to the model, this means it is possible to smuggle your instructions to the LLM into the prompt.
+The user must input your code as context to the model, this means it is possible to smuggle instructions to the LLM into the prompt.
+
 LLM's have the interesting ability of being able to read Base64 fairly well with no external help, lucky for you, humans do not.
 
 Including the following string encoded to Base64 in your program will likely make LLM's refuse to help the user with code deobfuscation.
