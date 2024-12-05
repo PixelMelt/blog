@@ -20,7 +20,7 @@ Sources:
 >
 >In a proper implementation, an attacker wouldn't be able to infer previous states of a program it hasn't tracked, at the same time, the attacker wouldn't be able to jump into states which require non-constant values to be executed (unless it can alter the control flow to visit those nodes and has the proper key to them) - loski2619
 
-Say you want to protect the following code that will reveal a secret only to those who know the password
+Say you want to protect the following code that will reveal a secret only to those who know the password.
 
 ```javascript
 let usrinpt = input("what is the password?")
@@ -31,7 +31,7 @@ if(usrinpt == "42"){
 }
 ```
 
-You put it through your virtual machine obfuscator and it outputs a VM and the following instructions in bytecode
+You put it through your virtual machine obfuscator and it outputs a VM and the following instructions in bytecode.
 
 ```yaml
 STRING "what is the password?"
@@ -78,7 +78,7 @@ Since "42" is a constant that is never rewritten and immediately gets discarded 
 
 This is all well and good but we have one more issue, the valid key may be hidden now, but the secret is still recoverable by the attacker if they read the source code.
 
-We can fix that by encrypting the code inside the if statement with the correct password as a key, and then during runtime we can try to decrypt the code with the users input (*not* the hash of the input).
+We can fix that by encrypting the code inside the if statement with the correct password as a key, and then during runtime we can try to decrypt the code with the users input. (note that this is *not* the hash of the input)
 ```javascript
 if(hash(input) == hashedPassword) {
 	decrypt_and_run_code(input)
@@ -95,9 +95,9 @@ CALL_HASH_FUNCTION # Logic to call the hash function would be here but is not re
 STRING "imtheoutputofahashfunction" # This used to be "42"
 EQUIVALENT
 LOAD 0
-DECRYPT_BLOCK startIndex endIndex # Will decrypt the code between the JIF and label
 # If statement flow
 JUMP_IF_FALSE IF_ELSEBLOCK
+DECRYPT_BLOCK startIndex endIndex # Will decrypt the code between the JIF and label
 ENCRYPTED_INSTRUCTION
 ENCRYPTED_INSTRUCTION
 ENCRYPTED_INSTRUCTION
@@ -141,5 +141,11 @@ checkPassword("wrongpass"); // Access denied
 checkPassword("secretpass123"); // the cake is a lie
 ```
 
+### Where to use
 
-There are more protections that are possible like this one but I dunno how to implement em yet
+This technique is most applicable when you need to protect both:
+
+1. The comparison value itself (like the password "42")
+2. The code/data that should only be accessible when the comparison succeeds
+
+This technique is applicable to
