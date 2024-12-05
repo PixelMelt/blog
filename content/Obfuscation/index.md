@@ -10,9 +10,22 @@ tags:
 ---
 Blogs, videos, papers related to obfuscation or reverse engineering
 
-[BELabs](https://back.engineering/blog) - Great VMProtect 2 analysis
+Chatrooms:
 
 [Sneaker Development Discord server](https://discord.gg/sneakerdev) - Probably the best resource on commercial web based anti bots
 
 [JS (De)obfuscation Discord server](https://discord.com/invite/KQjZx2X28n) - Lots of noobs but some knowledgeable people willing to answer questions
 
+Companies:
+
+[F5 / Shape Security](https://www.f5.com/) - Widely considered the most difficult web based antibot to reverse engineer, "ShapeSecurity's VM is always pushing the boundaries of the kind of fuckery that you can do in Javascript" - [Erik Dominguez](https://www.linkedin.com/in/erik-dominguez-44a281284/?ref=botting.rocks)
+
+Blogs:
+
+[BELabs](https://back.engineering/blog) - Great VMProtect 2 analysis
+
+[Sveba's blog](https://svebaa.github.io/personal/blog/) - Information on Shape Security's virtual machine
+
+[Botting.rocks](https://www.botting.rocks/) - Lots of information on Shape Security's virtual machine, author is extremely good at reversing antibots in general
+
+[Umasi.dev](https://blog.umasi.dev/)/[Nullpt.rs](https://www.nullpt.rs/) - Information on nike.com's antibot
