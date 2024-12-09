@@ -147,5 +147,3 @@ This technique is most applicable when you need to protect both:
 
 1. The comparison value itself (like the password "42")
 2. The code/data that should only be accessible when the comparison succeeds
-
-This technique is applicable to

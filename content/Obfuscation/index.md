@@ -10,6 +10,12 @@ tags:
 ---
 Blogs, videos, papers related to obfuscation or reverse engineering
 
+Websites:
+
+[Tigress.wtf](https://tigress.wtf/) - C obfuscator, lists the transformations it does to src on the site.
+
+[Ligerlabs.org](https://ligerlabs.org/) - Tigress C obfuscator companion site, has tutorials and lectures.
+
 Chatrooms:
 
 [Sneaker Development Discord server](https://discord.gg/sneakerdev) - Probably the best resource on commercial web based anti bots

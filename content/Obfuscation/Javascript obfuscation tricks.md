@@ -110,6 +110,43 @@ Source: [doctor8296](https://github.com/MichaelXF/js-confuser/issues/147#issueco
 ```
 This will not show the location of the code causing the crash in browser devtools or give a stack trace in NodeJS. However this approach uses the over-writable method "setTimeout" which makes it less appealing for use in code protection.
 
+## Reading variable names
+### Variable names can be extracted as strings
+
+Using object key iteration, you can extract a variable's name as a string.
+This allows storing data or code in the variable names themselves.
+
+Since variable names can be arbitrarily long, this provides a way to store large amounts of data directly in identifiers.
+
+Source: [doctor8296](https://github.com/MichaelXF/js-confuser/issues/161#issue-2723979720)
+```js
+const some_interesting_text = 100;
+let variable_name;
+for (const key in {some_interesting_text}) {
+    variable_name = key;
+}
+
+variable_name // now contains "some_interesting_text"
+```
+
+This technique can be used to enforce variable name integrity, as the code can be made to depend on exact variable names being preserved.
+
+Combined with eval(), it creates name dependencies that break if modified:
+
+```js
+let someOutsideEvelVariable = false;
+const someOutsideEvelVariableName = (() => {
+  for (const key in {someOutsideEvelVariable} ) {
+    return key;
+  }
+})();
+eval(`${someOutsideEvelVariableName}=true`);
+```
+
+Attempting to rename variables would break functionality since the extracted name strings would no longer match.
+
+The extremely long variable names possible with this approach can make the code very difficult to work with if someone attempts modifications.
+
 ## Avoiding analysis
 ### Large Language Models
 LLM's are actually very good at code deobfuscation these days, here are some techniques to throw a screwdriver into that form of deobfuscation.
