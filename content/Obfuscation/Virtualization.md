@@ -14,17 +14,18 @@ Coming soon
 ![[real one.png]]
 
 
-# Braindump
-kinda at a loss for how to make my stuff better so here's random ideas that I mostly stole from elsewhere.
+Ideas that I mostly stole from elsewhere.
 
 use constants defined in block A to decrypt B and C which branch from A
 
-Spin opcode indexs around during execution, could just use a seeded random function
+Rotate opcode indexs around during execution, could just use a seeded random function
 
 also using seeded random function to decrypt bytecode
 
 Eric says
 > The **OPS_FUNCTIONS** was originally an _array_ of ops functions but in the pretty version it was converted to an object with each key corresponding to the index in the original _array_. It would have been too difficult to find each op in an **array** of hundreds of ops visually when working along ShapeSecurity's VM. For this reason alone it was converted into an _object_ instead of an _array_.
 
-I guess this means I should try to shove everything onto one array, my vm already kinda does this tho so I guess im good, unless I add more shit into the opcode array, might make things more confusing if ops and important functions just continuously get shuffled around together.
-
+What makes shape actually hard to reverse?
+- opcodes aren't atomic and are split into multiple "actions" what when run in sequence have the same effect
+- strings get decrypted at runtime using 2 indexes of an array of base64 strings that get xored together
+- who knows (not me)
